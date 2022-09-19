@@ -1,0 +1,23 @@
+/* .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    padding: 0 350px 0 30px;
+    top: 30px;
+    width: 100%;
+    height: 50px;
+    color: grey;
+    background-color: #fff;
+    box-shadow: 0 0 40px 8px rgb(0 0 0 / 18%);
+    transition: background-color .5s ease-in; color .5s ease-in;
+} */
+
+/* .container {
+    display: flex;
+    flex-direction: column;
+} */
+.main {
+    display: flex;
+    flex-direction: column;
+}
