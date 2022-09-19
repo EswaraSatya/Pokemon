@@ -1,0 +1,13 @@
+.paper {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid rgba(0 0 0 0.125);
+    width: 12rem;
+    height: 16.5rem;
+    padding: 0.5rem 0.3rem 0.3rem;
+    font-size: medium;
+    color: grey;
+    transition: #fff 3s ease;
+    box-sizing: border-box;
+}
