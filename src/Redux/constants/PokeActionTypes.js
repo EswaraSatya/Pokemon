@@ -1,3 +1,4 @@
 export const PokeActionTypes = {
   UPDATE_POKEMON: "UPDATE_POKEMON",
+  SELECTED_POKEMON: "SELECTED_POKEMON",
 };

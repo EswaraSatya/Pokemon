@@ -1,9 +1,13 @@
 import { PokeActionTypes } from "../constants/PokeActionTypes";
 
 const PokeActions = {
-  updatePokemonList: (status) => ({
+  updatePokemonList: (data) => ({
     type: PokeActionTypes.UPDATE_POKEMON,
-    data: status,
+    payload: data,
+  }),
+  selectedPokemonList: (data) => ({
+    type: PokeActionTypes.SELECTED_POKEMON,
+    payload: data,
   }),
 };
 export default PokeActions;
