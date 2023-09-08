@@ -7,7 +7,6 @@ import "./PokeCard.scss";
 import Header from "../Header/Header";
 
 export const DetailPage = (props) => {
-  const [data, setData] = React.useState("");
 
   const pokedetails = useSelector((state) => state);
   console.log(pokedetails.Records);

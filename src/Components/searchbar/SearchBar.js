@@ -87,10 +87,8 @@ const darkTheme = createTheme({
 
 export default function TopBar(props) {
   const [open, setOpen] = React.useState(false);
-  const [scroll, setScroll] = React.useState("paper");
   const handleClickOpen = (scrollType) => () => {
     setOpen(true);
-    setScroll(scrollType);
   };
 
   const handleClose = () => {

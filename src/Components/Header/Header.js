@@ -19,8 +19,6 @@ import { useNavigate } from "react-router-dom";
 const Header = (props) => {
   const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
-
-  const [scroll, setScroll] = React.useState("paper");
   const pokedetails = useSelector((state) => state);
   console.log(pokedetails.Records);
   const darkTheme = createTheme({

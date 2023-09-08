@@ -3,7 +3,6 @@ import CardMedia from "@mui/material/CardMedia";
 import { useDispatch, useSelector } from "react-redux";
 import TopBar from "../searchbar/SearchBar";
 import PokeActions from "../../Redux/actions/PokeActions";
-import CircularProgress from "@mui/material/CircularProgress";
 import { Card, CardActionArea } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import "./PokeCard.scss";

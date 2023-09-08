@@ -2,7 +2,6 @@ import "./App.css";
 import { DetailPage } from "./Components/PokeDetails/DetailPage";
 import { PokeCard } from "./Components/PokeDetails/PokeCard";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { motion } from "framer-motion";
 
 function App() {
 
