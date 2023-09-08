@@ -23,7 +23,7 @@ export const DetailPage = (props) => {
   return (
     <div>
       <Header />
-      {pokedetails.Records.map((results, index) =>
+      {/* {pokedetails.Records.map((results, index) =>
         data == index ? ( // by query params
           // pokedetails.selectedRecords === index + 1 ? ( // by redux update
           <>
@@ -52,7 +52,7 @@ export const DetailPage = (props) => {
             </div>
           </>
         ) : null
-      )}
+      )} */}
     </div>
   );
 };
