@@ -19,8 +19,8 @@ const AppWrapper = styled.div`
   align-items: center;
   flex-wrap: wrap;
   box-sizing: border-box;
-  height: 720px;
-  padding-bottom: 140px;
+  height: 632px;
+  /* padding-bottom: 140px; */
 
   ::-webkit-scrollbar-track {
     border-radius: 10px;
@@ -43,6 +43,32 @@ const AppWrapper = styled.div`
     margin-bottom: 5px;
   }
 `;
+
+const Wrapper = styled.div`
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-left: 64px;
+          box-sizing: border-box;
+          padding-top: 75px;
+          overflow: scroll;
+
+          ::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f5f5f5; /* Background color of the scrollbar track */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Color of the thumb on hover */
+  }
+`;
+
 
 export const PokeCard = () => {
   const dispatch = useDispatch();
@@ -102,18 +128,9 @@ export const PokeCard = () => {
   return (
     <>
       {!isLoading && <TopBar searchItems={searchItems} />}
-      <div
+      <Wrapper
         style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          paddingLeft: "120px",
-          boxSizing: "border-box",
-          paddingTop: "75px",
-          overflow: "scroll",
           backgroundColor: !isLoading ? "white" : "",
-
         }}
       >
         <AppWrapper>
@@ -153,27 +170,25 @@ export const PokeCard = () => {
               </motion.div></div>
           ) : (
             newUsers.map(({ id, name, url, type }) => (
-              <div class="card-container">
+              <div>
                 <Card
                   className="card2"
                   style={{
                     color: "white",
+                    borderRadius: "0"
                   }}
-                  elevation={2}
                   key={id}
-                  onClick={() => routeChange(id)}
                   sx={{
                     display: "flex",
                     flexDirection: "column",
                     backgroundColor: "#fff",
                     border: "1px solid rgba(0,0,0,.125)",
-                    width: "12rem",
-                    height: "16.5rem",
+                    width: "9rem",
+                    height: "12rem",
                     padding: "0.5rem 0.3rem 0.3rem",
                     fontSize: "medium",
                     color: "grey",
-                    transition: "background-color 0.3s ease", // Adjust transition duration
-                    boxSizing: "border-box",
+                    transition: "background-color 5.3s ease", // Adjust transition duration
                   }}
                 >
                   <CardActionArea>
@@ -188,33 +203,35 @@ export const PokeCard = () => {
                           top: "-6px",
                         }}
                       >
-                        <h1
+                        <p
                           style={{
                             fontSize: "1.7rem",
                             margin: 0,
-                            color: "#9e9e9e",
+                            color: "#808080",
                           }}
                         >
                           {id}
-                        </h1>
-                        <h1
+                        </p>
+                        <p
                           style={{
                             fontSize: "1rem",
                             margin: 0,
                             overflow: "hidden",
                             textOverflow: "ellipsis",
+                            textTransform: "capitalize",
                             whiteSpace: "nowrap",
-                            color: "#9e9e9e",
+                            color: "#808080",
                           }}
                         >
                           {name}
-                        </h1>
+                        </p>
                       </div>
                       <Types type={type} />
                     </div>
                     <motion.div whileHover={{ scale: 1.2 }} transition={{ type: "spring", stiffness: 400, damping: 10 }} whileTap={{ scale: 0.8 }}
                     >
                       <CardMedia
+                        onClick={() => routeChange(id)}
                         component="img"
                         height="180"
                         image={url}
@@ -234,7 +251,7 @@ export const PokeCard = () => {
             ))
           )}
         </AppWrapper>
-      </div >
+      </Wrapper >
     </>
   );
 };
