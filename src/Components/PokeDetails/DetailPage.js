@@ -20,20 +20,17 @@ export const DetailPage = (props) => {
     // same as case1
     console.log(id);
   }, [id]);
-
-  console.log(pokedetails);
-
+  console.log(pokedetails.Records);
   return (
     <div>
       <Header />
       {pokedetails.Records.map((results, index) =>
-        // data == index ? ( // by query params
-        pokedetails.selectedRecords === index + 1 ? ( // by redux update
+        data == index ? ( // by query params
+          // pokedetails.selectedRecords === index + 1 ? ( // by redux update
           <>
             <h1 className="pokename">{results.name}</h1>
             <span className="poketype">{results.pokemontype}</span>
             <div className="pokedetailsection">
-              <div></div>
               <CardMedia
                 component="img"
                 image={results.url}
@@ -43,6 +40,16 @@ export const DetailPage = (props) => {
                   width: "41%",
                 }}
               />
+              <div className="inner2">
+                <div className="innerattack">
+                  <h1>HP :{results.base.HP}</h1>
+                  <h1>Attack :{results.base.Attack}</h1>
+                  <h1>Defense :{results.base.Defense}</h1>
+                  <h1>Sp. Attack :{results.base.SpAttack}</h1>
+                  <h1>Sp. Defense :{results.base.SpDefense}</h1>
+                  <h1>Speed :{results.base.Speed}</h1>
+                </div>
+              </div>
             </div>
           </>
         ) : null

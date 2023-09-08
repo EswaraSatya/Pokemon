@@ -2,16 +2,16 @@ import "./App.css";
 import { DetailPage } from "./Components/PokeDetails/DetailPage";
 import { PokeCard } from "./Components/PokeDetails/PokeCard";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function App() {
+
   return (
     <div className="App">
-      {/* <PokeCard /> */}
       <Router>
         <Routes>
           <Route path="/" element={<PokeCard />} />
-          <Route path="/pokedetails/" element={<DetailPage />} />
-          {/* <Route path="/pokedetails/:id" element={<DetailPage />} /> // works with query by passsing id */}
+          <Route path="/pokedetails/:id" element={<DetailPage />} />
         </Routes>
       </Router>
     </div>

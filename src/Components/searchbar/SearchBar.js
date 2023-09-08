@@ -111,8 +111,11 @@ export default function TopBar(props) {
       <Box sx={{ flexGrow: 2 }}>
         <ThemeProvider theme={darkTheme}>
           <ElevationScroll {...props}>
-            <AppBar style={{ height: "70px" }}>
-              <Toolbar>
+            <AppBar style={{
+              height: "70px", background: 'transparent', boxShadow: 'none', backdropFilter: 'blur(5px)',
+              WebkitBackdropFilter: 'blur(5px)'
+            }}>
+              < Toolbar >
                 <Search onChange={(e) => props.searchItems(e.target.value)}>
                   <SearchIconWrapper>
                     <SearchIcon />
@@ -131,6 +134,7 @@ export default function TopBar(props) {
                   style={{
                     display: "flex",
                     flexDirection: "row-reverse",
+                    cursor:"pointer",
                   }}
                   onClick={handleClickOpen("body")}
                 >
@@ -140,7 +144,7 @@ export default function TopBar(props) {
             </AppBar>
           </ElevationScroll>
         </ThemeProvider>
-      </Box>
+      </Box >
 
       <Dialog
         open={open}
@@ -172,13 +176,12 @@ export default function TopBar(props) {
         </DialogContent>
         <Divider />
 
-        <DialogActions>
+        <DialogActions style={{ marginRight: "41%" }}>
           <Button
             onClick={handleClose}
             style={{
               display: "flex",
               alignItems: "center",
-              paddingRight: "40%",
             }}
             color="secondary"
           >
@@ -186,6 +189,6 @@ export default function TopBar(props) {
           </Button>
         </DialogActions>
       </Dialog>
-    </div>
+    </div >
   );
 }

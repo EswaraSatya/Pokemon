@@ -4,7 +4,9 @@ export const TopBar = () => {
   return (
     <div className="main">
       <div>
-        <h1 className="headername">PokéDex</h1>
+        <h1 style={{
+          cursor: "pointer"
+        }} className="headername">PokéDex</h1>
       </div>
     </div>
   );

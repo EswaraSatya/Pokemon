@@ -93,6 +93,7 @@ const Header = (props) => {
                   style={{
                     display: "flex",
                     flexDirection: "row-reverse",
+                    cursor:"pointer",
                   }}
                   onClick={handleClickOpen("body")}
                 >
@@ -136,13 +137,12 @@ const Header = (props) => {
           </DialogContent>
           <Divider />
 
-          <DialogActions>
+          <DialogActions style={{ marginRight: "41%" }}>
             <Button
               onClick={handleClose}
               style={{
                 display: "flex",
                 alignItems: "center",
-                paddingRight: "40%",
               }}
               color="secondary"
             >

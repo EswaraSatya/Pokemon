@@ -23,7 +23,30 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+body {
+  --black: #000000;
+  --ash-black: #222;
+  --white: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue: #1300ff;
+  --dusk: #6600ff;
+  --purple: #d9baee;
+  --pink: #ff0066;
+  --red: #fe0222;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
 
+  --background: var(--purple);
+  --accent: var(--white);
+
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--accent);
+  padding-bottom: 100px;
+  overflow: hidden;
+}
 .App-link {
   color: #61dafb;
 }
@@ -36,3 +59,11 @@
     transform: rotate(360deg);
   }
 }
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: var(--accent);
+}
+
+

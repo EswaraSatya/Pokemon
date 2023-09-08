@@ -7,26 +7,29 @@
   text-decoration: none;
   z-index: 0;
   overflow: hidden;
-
-  &:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: -26px;
-    right: -26px;
-    background: #e3f2fd;
-    height: 32px;
-    width: 32px;
-    border-radius: 32px;
-    transform: scale(1);
-    transform-origin: 50% 50%;
-    transition: transform 0.25s ease-out;
-  }
-
-  &:hover:before {
-    transform: scale(21);
-  }
+  transition: transform 0.2s, background-color 10.5s;
 }
+
+.card2:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -26px;
+  right: -26px;
+  background: #e3f2fd;
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out;
+}
+
+.card2:hover {
+  background-color: rgba(204, 235, 255, 0.9);
+  transition: transform 0.5s, background-color 0.5s;
+}
+
 
 .pokename {
   opacity: 1;
@@ -50,4 +53,133 @@
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+}
+
+.innerattacks {
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+
+.inner2 {
+  perspective: 400px;
+  width: 27em;
+  -webkit-font-smoothing: antialiased !important;
+  transform: 30deg;
+
+  :hover {
+    transition: .5s;
+    transform: rotateY(-30deg);
+  }
+
+}
+
+.grass {
+  background: #5fbd58;
+  box-shadow: 0 0 20px #5fbd58;
+  border-radius: 100%;
+
+  :hover {
+    filter: saturate(200%);
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all .2s;
+
+  }
+}
+
+.type-icon {
+  border-radius: 100%;
+  height: 31px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    filter: saturate(200%);
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  img {
+    width: 66%;
+    margin: 17%;
+  }
+}
+
+.type-icon.grass-type {
+  background: #5fbd58;
+  box-shadow: 0 0 20px #5fbd58;
+}
+
+.type-icon.poison-type {
+  background: #b763cf;
+  box-shadow: 0 0 20px #b763cf;
+}
+
+.type-icon.fire-type {
+  background: #fba54c;
+  box-shadow: 0 0 20px #fba54c;
+}
+
+.type-icon.water-type {
+  background: #539ddf;
+  box-shadow: 0 0 20px #539ddf;
+}
+
+.type-icon.bug-type {
+  background: #92bc2c;
+  box-shadow: 0 0 20px #92bc2c;
+}
+
+.type-icon.flying-type {
+  background: #a1bbec;
+  box-shadow: 0 0 20px #a1bbec;
+}
+
+.type-icon.electric-type {
+  background: #f2d94e;
+  box-shadow: 0 0 20px #f2d94e;
+}
+
+.type-icon.ground-type {
+  background: #da7c4d;
+  box-shadow: 0 0 20px #da7c4d;
+}
+
+.type-icon.fairy-type {
+  background: #ee90e6;
+  box-shadow: 0 0 20px #ee90e6;
+}
+
+.type-icon.fighting-type {
+  background: #d3425f;
+  box-shadow: 0 0 20px #d3425f;
+}
+
+.type-icon.psychic-type {
+  background: #fa8581;
+  box-shadow: 0 0 20px #fa8581;
+}
+
+.type-icon.rock-type {
+  background: #c9bb8a;
+  box-shadow: 0 0 20px #c9bb8a;
+}
+
+.type-icon.steel-type {
+  background: #5695a3;
+  box-shadow: 0 0 20px #5695a3;
+}
+
+.type-icon.ice-type {
+  background: #75d0c1;
+  box-shadow: 0 0 20px #75d0c1
+}
+
+.type-icon.ghost-type {
+  background: #5f6dbc;
+  box-shadow: 0 0 20px #5f6dbc;
 }
