@@ -48,7 +48,6 @@ const Header = (props) => {
 
   const handleClickOpen = (scrollType) => () => {
     setOpen(true);
-    setScroll(scrollType);
   };
 
   const handleClose = () => {
